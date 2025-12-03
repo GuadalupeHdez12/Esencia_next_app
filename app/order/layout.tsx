@@ -1,16 +1,24 @@
 import OrderSiderbar from "@/components/order/OrderSiderbar";
 import OrderSummary from "@/components/order/OrderSummary";
+import ToastNotification from "@/components/ui/ToastNotification";
 
-export default function OrderLayout({children,}: Readonly<{ children: React.ReactNode }>) {
+export default function OrderLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
       <div className="md:flex">
-        <OrderSiderbar/>
+        <OrderSiderbar />
         <main className="md:flex-1 md:h-screen md:overflow-y-scroll p-5">
-            {children}
+          {children}
         </main>
-        <OrderSummary/> {/* Resumen de la orden */}
+        <OrderSummary /> {/* Resumen de la orden */}
       </div>
+
+
+      <ToastNotification />
+
+
+
+
     </>
   );
 }

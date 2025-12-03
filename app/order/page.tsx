@@ -1,6 +1,9 @@
 
-export default function OrderPage() {
-  return (
-    <div>OrderPage</div>
-  )
+import { redirect } from 'next/navigation';
+
+export default function OrderRootPage() {
+
+    redirect('/order/platos-fuertes');
+
+
 }
